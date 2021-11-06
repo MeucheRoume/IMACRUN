@@ -1,9 +1,26 @@
-﻿# CMakeList.txt : projet CMake pour IMACRUN, incluez la source et définissez
-# la logique spécifique au projet ici.
-#
-cmake_minimum_required (VERSION 3.8)
+cmake_minimum_required(VERSION 2.8)
 
-# Ajoutez une source à l'exécutable de ce projet.
-add_executable (IMACRUN "IMACRUN.cpp" "IMACRUN.h")
+project(ImacGL)
 
-# TODO: Ajoutez des tests et installez des cibles si nécessaire.
+add_definitions(-std=c++11)
+
+set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/CMake)
+
+find_package(SDL REQUIRED)
+find_package(OpenGL REQUIRED)
+find_package(GLEW REQUIRED)
+
+# Pour gérer un bug a la fac, a supprimer sur machine perso:
+set(OPENGL_LIBRARIES /usr/lib/x86_64-linux-gnu/libGL.so.1)
+
+include_directories(${SDL_INCLUDE_DIR} ${OPENGL_INCLUDE_DIR} ${GLEW_INCLUDE_DIR} glimac/include third-party/include)
+
+set(ALL_LIBRARIES glimac ${SDL_LIBRARY} ${OPENGL_LIBRARIES} ${GLEW_LIBRARY})
+
+add_subdirectory(glimac)
+
+file(GLOB TP_DIRECTORIES "TP*")
+
+foreach(TP ${TP_DIRECTORIES})
+    add_subdirectory(${TP})
+endforeach()
