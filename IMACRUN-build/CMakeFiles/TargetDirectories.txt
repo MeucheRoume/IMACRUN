@@ -3,3 +3,6 @@
 /home/ush/Documents/IMACRUN/IMACRUN-build/glimac/CMakeFiles/rebuild_cache.dir
 /home/ush/Documents/IMACRUN/IMACRUN-build/glimac/CMakeFiles/edit_cache.dir
 /home/ush/Documents/IMACRUN/IMACRUN-build/glimac/CMakeFiles/glimac.dir
+/home/ush/Documents/IMACRUN/IMACRUN-build/JEU/CMakeFiles/rebuild_cache.dir
+/home/ush/Documents/IMACRUN/IMACRUN-build/JEU/CMakeFiles/edit_cache.dir
+/home/ush/Documents/IMACRUN/IMACRUN-build/JEU/CMakeFiles/JEU_SDLtemplate.dir

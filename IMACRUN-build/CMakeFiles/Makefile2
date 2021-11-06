@@ -54,18 +54,39 @@ CMAKE_BINARY_DIR = /home/ush/Documents/IMACRUN/IMACRUN-build
 
 # The main recursive "all" target.
 all: glimac/all
+all: JEU/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: glimac/preinstall
+preinstall: JEU/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: glimac/clean
+clean: JEU/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory JEU
+
+# Recursive "all" directory target.
+JEU/all: JEU/CMakeFiles/JEU_SDLtemplate.dir/all
+
+.PHONY : JEU/all
+
+# Recursive "preinstall" directory target.
+JEU/preinstall:
+
+.PHONY : JEU/preinstall
+
+# Recursive "clean" directory target.
+JEU/clean: JEU/CMakeFiles/JEU_SDLtemplate.dir/clean
+
+.PHONY : JEU/clean
 
 #=============================================================================
 # Directory level rules for directory glimac
@@ -92,7 +113,7 @@ glimac/clean: glimac/CMakeFiles/glimac.dir/clean
 glimac/CMakeFiles/glimac.dir/all:
 	$(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/depend
 	$(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ush/Documents/IMACRUN/IMACRUN-build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target glimac"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ush/Documents/IMACRUN/IMACRUN-build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11 "Built target glimac"
 .PHONY : glimac/CMakeFiles/glimac.dir/all
 
 # Build rule for subdir invocation for target.
@@ -111,6 +132,33 @@ glimac: glimac/CMakeFiles/glimac.dir/rule
 glimac/CMakeFiles/glimac.dir/clean:
 	$(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/clean
 .PHONY : glimac/CMakeFiles/glimac.dir/clean
+
+#=============================================================================
+# Target rules for target JEU/CMakeFiles/JEU_SDLtemplate.dir
+
+# All Build rule for target.
+JEU/CMakeFiles/JEU_SDLtemplate.dir/all: glimac/CMakeFiles/glimac.dir/all
+	$(MAKE) -f JEU/CMakeFiles/JEU_SDLtemplate.dir/build.make JEU/CMakeFiles/JEU_SDLtemplate.dir/depend
+	$(MAKE) -f JEU/CMakeFiles/JEU_SDLtemplate.dir/build.make JEU/CMakeFiles/JEU_SDLtemplate.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ush/Documents/IMACRUN/IMACRUN-build/CMakeFiles --progress-num=1,2 "Built target JEU_SDLtemplate"
+.PHONY : JEU/CMakeFiles/JEU_SDLtemplate.dir/all
+
+# Build rule for subdir invocation for target.
+JEU/CMakeFiles/JEU_SDLtemplate.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ush/Documents/IMACRUN/IMACRUN-build/CMakeFiles 11
+	$(MAKE) -f CMakeFiles/Makefile2 JEU/CMakeFiles/JEU_SDLtemplate.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ush/Documents/IMACRUN/IMACRUN-build/CMakeFiles 0
+.PHONY : JEU/CMakeFiles/JEU_SDLtemplate.dir/rule
+
+# Convenience name for target.
+JEU_SDLtemplate: JEU/CMakeFiles/JEU_SDLtemplate.dir/rule
+
+.PHONY : JEU_SDLtemplate
+
+# clean rule for target.
+JEU/CMakeFiles/JEU_SDLtemplate.dir/clean:
+	$(MAKE) -f JEU/CMakeFiles/JEU_SDLtemplate.dir/build.make JEU/CMakeFiles/JEU_SDLtemplate.dir/clean
+.PHONY : JEU/CMakeFiles/JEU_SDLtemplate.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

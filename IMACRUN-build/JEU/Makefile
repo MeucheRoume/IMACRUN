@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ush/Documents/IMACRUN/IMACRUN-build/CMakeFiles /home/ush/Documents/IMACRUN/IMACRUN-build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/ush/Documents/IMACRUN/IMACRUN-build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ush/Documents/IMACRUN/IMACRUN-build/CMakeFiles /home/ush/Documents/IMACRUN/IMACRUN-build/JEU/CMakeFiles/progress.marks
+	cd /home/ush/Documents/IMACRUN/IMACRUN-build && $(MAKE) -f CMakeFiles/Makefile2 JEU/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ush/Documents/IMACRUN/IMACRUN-build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/ush/Documents/IMACRUN/IMACRUN-build && $(MAKE) -f CMakeFiles/Makefile2 JEU/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,44 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ush/Documents/IMACRUN/IMACRUN-build && $(MAKE) -f CMakeFiles/Makefile2 JEU/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ush/Documents/IMACRUN/IMACRUN-build && $(MAKE) -f CMakeFiles/Makefile2 JEU/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ush/Documents/IMACRUN/IMACRUN-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named glimac
+# Convenience name for target.
+JEU/CMakeFiles/JEU_SDLtemplate.dir/rule:
+	cd /home/ush/Documents/IMACRUN/IMACRUN-build && $(MAKE) -f CMakeFiles/Makefile2 JEU/CMakeFiles/JEU_SDLtemplate.dir/rule
+.PHONY : JEU/CMakeFiles/JEU_SDLtemplate.dir/rule
 
-# Build rule for target.
-glimac: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glimac
-.PHONY : glimac
+# Convenience name for target.
+JEU_SDLtemplate: JEU/CMakeFiles/JEU_SDLtemplate.dir/rule
 
-# fast build rule for target.
-glimac/fast:
-	$(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/build
-.PHONY : glimac/fast
-
-#=============================================================================
-# Target rules for targets named JEU_SDLtemplate
-
-# Build rule for target.
-JEU_SDLtemplate: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 JEU_SDLtemplate
 .PHONY : JEU_SDLtemplate
 
 # fast build rule for target.
 JEU_SDLtemplate/fast:
-	$(MAKE) -f JEU/CMakeFiles/JEU_SDLtemplate.dir/build.make JEU/CMakeFiles/JEU_SDLtemplate.dir/build
+	cd /home/ush/Documents/IMACRUN/IMACRUN-build && $(MAKE) -f JEU/CMakeFiles/JEU_SDLtemplate.dir/build.make JEU/CMakeFiles/JEU_SDLtemplate.dir/build
 .PHONY : JEU_SDLtemplate/fast
+
+SDLtemplate.o: SDLtemplate.cpp.o
+
+.PHONY : SDLtemplate.o
+
+# target to build an object file
+SDLtemplate.cpp.o:
+	cd /home/ush/Documents/IMACRUN/IMACRUN-build && $(MAKE) -f JEU/CMakeFiles/JEU_SDLtemplate.dir/build.make JEU/CMakeFiles/JEU_SDLtemplate.dir/SDLtemplate.cpp.o
+.PHONY : SDLtemplate.cpp.o
+
+SDLtemplate.i: SDLtemplate.cpp.i
+
+.PHONY : SDLtemplate.i
+
+# target to preprocess a source file
+SDLtemplate.cpp.i:
+	cd /home/ush/Documents/IMACRUN/IMACRUN-build && $(MAKE) -f JEU/CMakeFiles/JEU_SDLtemplate.dir/build.make JEU/CMakeFiles/JEU_SDLtemplate.dir/SDLtemplate.cpp.i
+.PHONY : SDLtemplate.cpp.i
+
+SDLtemplate.s: SDLtemplate.cpp.s
+
+.PHONY : SDLtemplate.s
+
+# target to generate assembly for a file
+SDLtemplate.cpp.s:
+	cd /home/ush/Documents/IMACRUN/IMACRUN-build && $(MAKE) -f JEU/CMakeFiles/JEU_SDLtemplate.dir/build.make JEU/CMakeFiles/JEU_SDLtemplate.dir/SDLtemplate.cpp.s
+.PHONY : SDLtemplate.cpp.s
 
 # Help Target
 help:
@@ -144,8 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... glimac"
 	@echo "... JEU_SDLtemplate"
+	@echo "... SDLtemplate.o"
+	@echo "... SDLtemplate.i"
+	@echo "... SDLtemplate.s"
 .PHONY : help
 
 
@@ -157,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ush/Documents/IMACRUN/IMACRUN-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

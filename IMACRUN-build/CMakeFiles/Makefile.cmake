@@ -12,6 +12,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
   "/home/ush/Documents/IMACRUN/IMACRUN/CMake/FindGLEW.cmake"
   "/home/ush/Documents/IMACRUN/IMACRUN/CMakeLists.txt"
+  "/home/ush/Documents/IMACRUN/IMACRUN/JEU/CMakeLists.txt"
   "/home/ush/Documents/IMACRUN/IMACRUN/glimac/CMakeLists.txt"
   "/usr/share/cmake-3.16/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake"
@@ -52,9 +53,11 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "glimac/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "JEU/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "glimac/CMakeFiles/glimac.dir/DependInfo.cmake"
+  "JEU/CMakeFiles/JEU_SDLtemplate.dir/DependInfo.cmake"
   )
